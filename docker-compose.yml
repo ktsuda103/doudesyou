@@ -18,13 +18,25 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      MYSQL_DATABASE: ****
-      MYSQL_USER: ****
-      MYSQL_PASSWORD: ****
-      MYSQL_ROOT_PASSWORD: ****
+      MYSQL_DATABASE: doudesyou
+      MYSQL_USER: ktsuda103
+      MYSQL_PASSWORD: ktsuda103
+      MYSQL_ROOT_PASSWORD: ktsuda103
     ports:
       - "3306:3306"
     volumes:
       - mysql-data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin # phpmyadminのコンテナイメージをそのまま利用
+    environment:
+      - PMA_HOST=mysql # 上記で作成したmysqlコンテナに接続
+    depends_on:
+      - mysql # 上記で作成したmysqlコンテナとリンクする
+    ports:
+      - 8888:80 # ホストの8888番ポートをphpmyadminコンテナの80番ポートに転送
+    volumes:
+      - ./pma/sessions:/sessions # ホストOSのpmaディレクトリ内にphpmyadminコンテナのセッションファイルを保存
 volumes:
   mysql-data:
+
