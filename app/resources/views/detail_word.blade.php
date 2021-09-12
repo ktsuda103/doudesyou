@@ -34,7 +34,18 @@
                             {{ session('success') }}
                         </div>
                     @endif
-                    コメントはありません
+                    @if(empty($posts))
+                        コメントはありません
+                    @else
+                        @foreach($posts as $post)
+                            <div class="row">
+                                <div class="col-md-4">投稿者：{{ $post['name'] }} </div>
+                                <div class="offset-md-4 small">{{ $post['created_at'] }}</div>
+                                <div class="col-12 lead">{{ $post['post'] }}</div>
+                            </div>
+                            <hr>
+                        @endforeach
+                    @endif
                 </div>
                 <div class="card-footer">
                     <form action="{{ route('store_post') }}" method="post">
