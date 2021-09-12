@@ -26,7 +26,8 @@ class WordFormRequest extends FormRequest
         return [
             'word' => 'required',
             'content' => 'required',
-            'title' => 'required'
+            'title' => 'required',
+            'person' => 'required'
         ];
     }
 }

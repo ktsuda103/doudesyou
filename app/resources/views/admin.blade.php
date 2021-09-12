@@ -35,6 +35,10 @@
                             <label for="title">サブタイトル:</label>
                             <input type="text" id="title" name="title" class="form-control">
                         </div>
+                        <div class="form-group">        
+                            <label for="person">発言者:</label>
+                            <input type="text" id="person" name="person" class="form-control">
+                        </div>
                         <input type="submit" value="登録" class="btn btn-primary">
                     </form>
                     </div>

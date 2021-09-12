@@ -21,6 +21,7 @@ class AdminController extends Controller
             $word->word = $request->input('word');
             $word->content = $request->input('content');
             $word->title = $request->input('title');
+            $word->person = $request->input('person');
             $word->save();
             return redirect()->route('admin')->with('success','名言を登録しました。');
         }

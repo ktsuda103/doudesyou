@@ -24,7 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $word_model = new Word();
+        $words = $word_model->all();
+        return view('home',compact('words'));
     }
 
 }
