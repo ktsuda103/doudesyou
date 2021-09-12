@@ -151,7 +151,8 @@ return [
         'password' => 'パスワード',
         'word' => '名言',
         'content' => '説明文',
-        'title' => 'サブタイトル'
+        'title' => 'サブタイトル',
+        'person' => '発言者'
     ],
 
 ];
