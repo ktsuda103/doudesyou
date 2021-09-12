@@ -24,3 +24,6 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/admin', [AdminController::class, 'admin'])->name('admin');
 Route::post('/store', [AdminController::class, 'store'])->name('store');
+Route::get('/edit/{id}', [AdminController::class, 'edit'])->name('edit');
+Route::post('/update', [AdminController::class, 'update'])->name('update');
+Route::post('/delete', [AdminController::class, 'delete'])->name('delete');
