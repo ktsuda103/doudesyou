@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\WordFormRequest;
-use App\Models\word;
+use App\Models\Word;
 
 class AdminController extends Controller
 {

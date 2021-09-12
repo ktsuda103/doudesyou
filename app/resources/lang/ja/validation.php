@@ -152,7 +152,8 @@ return [
         'word' => '名言',
         'content' => '説明文',
         'title' => 'サブタイトル',
-        'person' => '発言者'
+        'person' => '発言者',
+        'post' => 'コメント'
     ],
 
 ];

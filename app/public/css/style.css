@@ -9,3 +9,7 @@ body{
 li{
     list-style: none;
 }
+
+.card{
+    margin-bottom: 20px;
+}
