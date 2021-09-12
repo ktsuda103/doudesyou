@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\models\Word;
+use App\models\User;
 
 class HomeController extends Controller
 {
@@ -31,12 +32,19 @@ class HomeController extends Controller
 
     public function detail_word($id)
     {
+        $posts = $this->get_post($id);
         $word = Word::where('status',0)->find($id);
         if(!empty($word)){
-            return view('detail_word',compact('word'));
+            return view('detail_word',compact('word','posts'));
         }else{
             return redirect()->route('home');
         }
+    }
+
+    private function get_post($id)
+    {
+        $posts = User::join('posts','users.id','=','posts.user_id')->where('posts.word_id','=',$id)->get();
+        return $posts;
     }
 
 }

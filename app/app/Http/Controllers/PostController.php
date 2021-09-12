@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostFormRequest;
 use App\Models\Post;
+use App\Models\Word;
 
 class PostController extends Controller
 {
@@ -21,4 +22,6 @@ class PostController extends Controller
             return redirect()->route('detail_word',['id'=>$word_id])->with('success', 'コメントを投稿しました。');
         }
     }
+
+    
 }
