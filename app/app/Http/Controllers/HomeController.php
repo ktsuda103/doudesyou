@@ -29,4 +29,10 @@ class HomeController extends Controller
         return view('home',compact('words'));
     }
 
+    public function detail_word($id)
+    {
+        $word = Word::find($id);
+        return view('detail_word',compact('word'));
+    }
+
 }
