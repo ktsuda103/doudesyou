@@ -31,8 +31,12 @@ class HomeController extends Controller
 
     public function detail_word($id)
     {
-        $word = Word::find($id);
-        return view('detail_word',compact('word'));
+        $word = Word::where('status',0)->find($id);
+        if(!empty($word)){
+            return view('detail_word',compact('word'));
+        }else{
+            return redirect()->route('home');
+        }
     }
 
 }
