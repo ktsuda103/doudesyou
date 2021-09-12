@@ -11,7 +11,12 @@ class AdminController extends Controller
     
     public function admin()
     {
-        return view('admin');
+        $user = \Auth::user();
+        if($user['id'] === 1){
+            return view('admin');
+        }else{
+            return redirect()->route('home');
+        }
     }
 
     public function store(WordFormRequest $request)
