@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\homeController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +22,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/admin', [HomeController::class, 'admin'])->name('admin');
+Route::get('/admin', [AdminController::class, 'admin'])->name('admin');
+Route::post('/store', [AdminController::class, 'store'])->name('store');

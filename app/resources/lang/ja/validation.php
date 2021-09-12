@@ -148,7 +148,10 @@ return [
 
     'attributes' => [
         'name' => '名前',
-        'password' => 'パスワード'
+        'password' => 'パスワード',
+        'word' => '名言',
+        'content' => '説明文',
+        'title' => 'サブタイトル'
     ],
 
 ];
