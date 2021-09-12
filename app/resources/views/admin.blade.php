@@ -6,8 +6,23 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header">管理画面</div>
+                @if(session('success'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="card-body form-group">
-                    <form action="" method="post">
+                    <form action="{{ route('store') }}" method="post">
+                    @csrf
                         <div class="form-group">
                             <label for="word">名言:</label>
                             <input type="text" id="word" name="word" class="form-control">    
