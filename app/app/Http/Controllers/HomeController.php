@@ -29,4 +29,14 @@ class HomeController extends Controller
         return view('home',compact('words'));
     }
 
+    public function detail_word($id)
+    {
+        $word = Word::where('status',0)->find($id);
+        if(!empty($word)){
+            return view('detail_word',compact('word'));
+        }else{
+            return redirect()->route('home');
+        }
+    }
+
 }

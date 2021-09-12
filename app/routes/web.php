@@ -22,6 +22,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/detail_word/{id}', [HomeController::class, 'detail_word'])->name('detail_word');
 Route::get('/admin', [AdminController::class, 'admin'])->name('admin');
 Route::post('/store', [AdminController::class, 'store'])->name('store');
 Route::get('/edit/{id}', [AdminController::class, 'edit'])->name('edit');

@@ -2,6 +2,8 @@ body{
     background-image: url(../img/4173562_m.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 54px;
 }
 
 li{
