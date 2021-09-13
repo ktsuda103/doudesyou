@@ -53,8 +53,12 @@
                     <input type="hidden" name="id" value="{{ $word['id'] }}">
                         <div class="form-group">
                             <label for="post">コメント</label>
+                            @guest
+                            <p>コメントするにはログインが必要です。</p>
+                            @else
                             <input id="post" name="post" type="text" class="form-control">
                             <input type="submit" value="送信" class="btn btn-primary">
+                            @endguest
                         </div>
                     </form>
                 </div>

@@ -11,11 +11,11 @@ class PostController extends Controller
 {
     public function store_post(PostFormRequest $request)
     {
-        $user = \Auth::user();
+        $id = \Auth::id();
         $word_id = $request->input('id');
         if(empty($errors)){
             $post = new Post();
-            $post->user_id = $user['id'];
+            $post->user_id = $id;
             $post->word_id = $word_id;
             $post->post = $request->input('post');
             $post->save();
