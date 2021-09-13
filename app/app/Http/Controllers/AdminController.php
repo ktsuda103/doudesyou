@@ -8,15 +8,14 @@ use App\Models\Word;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     
     public function admin()
     {
-        $user = \Auth::user();
-        if($user['id'] === 1){
-            return view('admin');
-        }else{
-            return redirect()->route('home');
-        }
+        return view('admin');
     }
 
     public function store(WordFormRequest $request)
