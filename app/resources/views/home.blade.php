@@ -4,6 +4,19 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
+            <form action="" class="form-group form-inline">
+                <select name="title" id="" class="form-control">
+                    @foreach($titles as $title)
+                        <option value="">{{ $title }}</option>
+                    @endforeach
+                </select>
+                <select name="person" id="" class="form-control">
+                    @foreach($persons as $person)  
+                        <option value="">{{ $person }}</option>
+                    @endforeach
+                </select>
+                <input type="submit" value="検索" class="btn btn-success">
+            </form>
             <div class="card">
 
                 <div class="card-body">

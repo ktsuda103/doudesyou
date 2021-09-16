@@ -30,13 +30,13 @@
                                         @csrf
                                         <input type="hidden" name="id" value="{{ $stock->id }}">
                                         <input type="hidden" name="word_id" value="{{ $word->id }}">
-                                        <button class="btn" type="submit"><i class="far fa-star"></i></button>
+                                        <button class="btn" type="submit"><i class="far fa-star fa-2x"></i></button>
                                     </form>
                                 @else
                                     <form class="d-inline" action="{{ route('store_stock') }}" method="post">
                                         @csrf
                                         <input type="hidden" name="id" value="{{ $word->id }}">
-                                        <button class="btn" type="submit"><i class="fas fa-star star"></i></button>
+                                        <button class="btn" type="submit"><i class="fas fa-star star fa-2x"></i></button>
                                     </form>
                                 @endif
                             @endauth
@@ -75,7 +75,7 @@
                             @guest
                             <p>コメントするにはログインが必要です。</p>
                             @else
-                            <input id="post" name="post" type="text" class="form-control">
+                            <textarea name="post" id="post" cols="30" rows="10" class="form-control"></textarea>
                             <input type="submit" value="送信" class="btn btn-primary">
                             @endguest
                         </div>

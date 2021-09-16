@@ -28,7 +28,16 @@ class HomeController extends Controller
     {
         $word_model = new Word();
         $words = $word_model->where('status',0)->get();
-        return view('home',compact('words'));
+        $persons = [];
+        foreach($words as $word){
+            $persons[] = $word['person'];
+        }
+        $titles = [];
+        foreach($words as $word){
+            $titles[] = $word['title'];
+        }
+        $titles = array_unique($titles);
+        return view('home',compact('words','persons','titles'));
     }
 
     public function detail_word($id)
