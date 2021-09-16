@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\models\Word;
 use App\models\User;
+use App\models\Stock;
 
 class HomeController extends Controller
 {
@@ -32,10 +33,12 @@ class HomeController extends Controller
 
     public function detail_word($id)
     {
+        $user_id = \Auth::id();
         $posts = $this->get_post($id);
         $word = Word::where('status',0)->find($id);
+        $stock = Stock::where('user_id',$user_id)->where('word_id',$word['id'])->first();
         if(!empty($word)){
-            return view('detail_word',compact('word','posts'));
+            return view('detail_word',compact('word','posts','stock'));
         }else{
             return redirect()->route('home');
         }

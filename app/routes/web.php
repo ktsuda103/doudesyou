@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\StockController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,5 @@ Route::get('/edit/{id}', [AdminController::class, 'edit'])->name('edit');
 Route::post('/update', [AdminController::class, 'update'])->name('update');
 Route::post('/delete', [AdminController::class, 'delete'])->name('delete');
 Route::post('/store_post', [PostController::class, 'store_post'])->name('store_post');
+Route::post('/store_stock', [StockController::class, 'store_stock'])->name('store_stock');
+Route::post('/delete_stock', [StockController::class, 'delete_stock'])->name('delete_stock');
