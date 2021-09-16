@@ -6,21 +6,7 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header">
-                    <ul>
-                        <li>
-                            <a href="{{ route('detail_word',['id'=>$word->id]) }}" class="lead">{{ $word['word'] }}</a>
-                            <div>by{{ $word['person'] }}</div>
-                            <div class="text-right">〜{{ $word['title'] }}</div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-body form-group">
-                    {!! $word->content !!}
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    @if($errors->any())
+                @if($errors->any())
                         <div class="alert alert-danger">
                             <ul>
                                 @foreach($errors->all() as $error)
@@ -34,6 +20,39 @@
                             {{ session('success') }}
                         </div>
                     @endif
+                    <ul>
+                        <li>
+                            <div class="d-flex justify-content-between">
+                            <a href="{{ route('detail_word',['id'=>$word->id]) }}" class="lead">{{ $word['word'] }}</a>
+                            @auth
+                                @if(!empty($stock))
+                                    <form class="d-inline" action="{{ route('delete_stock') }}" method="post">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{ $stock->id }}">
+                                        <input type="hidden" name="word_id" value="{{ $word->id }}">
+                                        <button class="btn" type="submit"><i class="far fa-star"></i></button>
+                                    </form>
+                                @else
+                                    <form class="d-inline" action="{{ route('store_stock') }}" method="post">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{ $word->id }}">
+                                        <button class="btn" type="submit"><i class="fas fa-star star"></i></button>
+                                    </form>
+                                @endif
+                            @endauth
+                            </div>
+                            <div>by{{ $word['person'] }}</div>
+                            <div class="text-right">〜{{ $word['title'] }}</div>
+                            
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body form-group">
+                    {!! $word->content !!}
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
                     @if(empty($posts))
                         コメントはありません
                     @else

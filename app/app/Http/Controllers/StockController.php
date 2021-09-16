@@ -12,10 +12,18 @@ class StockController extends Controller
         $user_id = \Auth::id();
         $word_id = $request->input('id');
         $stock_model = new Stock();
-        $stock_model->user_id = $user_id;
-        $stock_model->word_id = $word_id;
-        $stock_model->save();
+        $stock_model->store($user_id,$word_id);
 
-        return redirect()->route('home')->with('success', 'ストックしました。');
+        return redirect()->route('detail_word',['id'=>$word_id])->with('success', 'ストックしました。');
     }
+
+    public function delete_stock(Request $request)
+    {
+        $id = $request->input('id');
+        $word_id = $request->input('word_id');
+        Stock::where('id',$id)->delete();
+        return redirect()->route('detail_word',['id'=>$word_id])->with('success','ストックを解除しました。');
+    }
+
+    
 }

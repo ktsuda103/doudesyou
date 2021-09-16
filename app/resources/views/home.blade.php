@@ -21,14 +21,6 @@
                     <ul>
                         <li>
                             <a href="{{ route('detail_word',['id'=>$word->id]) }}" class="lead">{{ $word['word'] }}</a>
-                            @guest
-                            @else
-                            <form class="d-inline" action="{{ route('store_stock') }}" method="post">
-                                @csrf
-                                <input type="hidden" name="id" value="{{ $word->id }}">
-                                <button class="btn" type="submit"><i class="fas fa-heart heart"></i></button>
-                            </form>
-                            @endguest
                             @if($user['id'] === 1)
                             <a href="{{ route('edit',['id' => $word->id]) }}"><i class="fas fa-pen"></i></a>
                             <form action="{{ route('delete') }}" method="post" class="d-inline">
