@@ -27,18 +27,23 @@ class HomeController extends Controller
     public function index()
     {
         $word_model = new Word();
-        $words = $word_model->where('status',0)->get();
-        $persons = [];
-        foreach($words as $word){
-            $persons[] = $word['person'];
-        }
-        $titles = [];
-        foreach($words as $word){
-            $titles[] = $word['title'];
-        }
-        $titles = array_unique($titles);
-        return view('home',compact('words','persons','titles'));
+        $words = $word_model->get_word()->get();
+        return view('home',compact('words'));
     }
+
+    public function search(Request $request)
+    {
+        $title = $request->input('title');
+        $person = $request->input('person');
+        if($title === null && $person === null){
+            return redirect()->route('home')->with('errors','キーワードを選択してください。');
+        }
+        $word_model = new Word();
+        $words = $word_model->search($title,$person);
+        return view('home',compact('words'));
+    }
+
+    
 
     public function detail_word($id)
     {
