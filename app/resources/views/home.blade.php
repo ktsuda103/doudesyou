@@ -52,7 +52,7 @@
                     @foreach($words as $word)
                     <ul>
                         <li>
-                            <a href="{{ route('detail_word',['id'=>$word->id]) }}" class="lead">{{ $word['word'] }}</a>
+                            <a href="{{ route('detail_word',['id'=>$word->id]) }}" class="lead word">{{ $word['word'] }}</a>
                             @if($user['id'] === 1)
                             <a href="{{ route('edit',['id' => $word->id]) }}"><i class="fas fa-pen"></i></a>
                             <form action="{{ route('delete') }}" method="post" class="d-inline">

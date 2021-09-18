@@ -12,7 +12,7 @@
                     @foreach($stocks as $stock)
                     <ul>
                         <li>
-                            <a href="{{ route('detail_word',['id'=>$stock->word_id]) }}" class="lead">{{ $stock['word'] }}</a>
+                            <a href="{{ route('detail_word',['id'=>$stock->word_id]) }}" class="lead word">{{ $stock['word'] }}</a>
                             <div>by{{ $stock['person'] }}</div>
                             <div class="text-right">〜{{ $stock['title'] }}</div>
                         </li>

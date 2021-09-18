@@ -23,7 +23,7 @@
                     <ul>
                         <li>
                             <div class="d-flex justify-content-between">
-                            <div class="lead">｢{{ $word['word'] }}｣</div>
+                            <div class="lead word">｢{{ $word['word'] }}｣</div>
                             @auth
                                 @if(!empty($stock))
                                     <form class="d-inline" action="{{ route('delete_stock') }}" method="post">

@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Grechen+Fuemen');
+@import url('https://fonts.googleapis.com/css?family=Hachi+Maru+Pop');
+
 body{
     background-image: url(../img/4173562_m.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding-top: 54px;
+}
+
+.title{
+    font-family: Grechen Fuemen;
+    font-size: 25px;
+}
+
+.word{
+    font-family: Hachi Maru Pop;
 }
 
 li{
