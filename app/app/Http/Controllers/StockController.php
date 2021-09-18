@@ -7,6 +7,18 @@ use App\Models\Stock;
 
 class StockController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function index_stock()
+    {
+        $stock_model = new Stock();
+        $stocks = $stock_model->get_my_all_stock()->join('words','words.id','=','stocks.word_id')->get();
+        return view('index_stock',compact('stocks'));
+    }
+
     public function store_stock(Request $request)
     {
         $user_id = \Auth::id();
@@ -24,6 +36,4 @@ class StockController extends Controller
         Stock::where('id',$id)->delete();
         return redirect()->route('detail_word',['id'=>$word_id])->with('success','ストックを解除しました。');
     }
-
-    
 }
