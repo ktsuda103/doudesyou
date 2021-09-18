@@ -8,10 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Word extends Model
 {
     use HasFactory;
-    public function posts()
-    {
-        return $this->hasMany('App\Models\Post');
-    }
 
     public function get_word()
     {

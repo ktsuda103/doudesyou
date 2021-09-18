@@ -47,10 +47,11 @@ class HomeController extends Controller
 
     public function detail_word($id)
     {
-        $user_id = \Auth::id();
+        $stock_model = new Stock();
         $posts = $this->get_post($id);
+        //dd($posts);
         $word = Word::where('status',0)->find($id);
-        $stock = Stock::where('user_id',$user_id)->where('word_id',$word['id'])->first();
+        $stock = $stock_model->get_my_word_stock($word)->first();
         if(!empty($word)){
             return view('detail_word',compact('word','posts','stock'));
         }else{

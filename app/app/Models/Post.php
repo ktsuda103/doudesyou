@@ -7,10 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    use HasFactory;
-    
-    public function words()
-    {
-        return $this->belongsTo('App\Models\Word');
-    }
+    use HasFactory;    
 }

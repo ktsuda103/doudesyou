@@ -23,7 +23,7 @@
                     <ul>
                         <li>
                             <div class="d-flex justify-content-between">
-                            <a href="{{ route('detail_word',['id'=>$word->id]) }}" class="lead">{{ $word['word'] }}</a>
+                            <div class="lead">｢{{ $word['word'] }}｣</div>
                             @auth
                                 @if(!empty($stock))
                                     <form class="d-inline" action="{{ route('delete_stock') }}" method="post">
@@ -53,8 +53,8 @@
             </div>
             <div class="card">
                 <div class="card-body">
-                    @if(empty($posts))
-                        コメントはありません
+                    @if($posts->isEmpty())
+                        <p>コメントはありません</p>
                     @else
                         @foreach($posts as $post)
                             <div class="row">
