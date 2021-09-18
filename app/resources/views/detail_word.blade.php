@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-9">
             <div class="card">
                 <div class="card-header">
                 @if($errors->any())
@@ -51,6 +51,7 @@
                     {!! $word->content !!}
                 </div>
             </div>
+            
             <div class="card">
                 <div class="card-body">
                     @if($posts->isEmpty())
@@ -83,6 +84,27 @@
                 </div>
             </div>
         </div>
+        @if(!empty($items))
+        <div class="col-md-3">
+                @for($i=0; $i<1; $i++)
+                    <div class="card p-0">
+                        <div class="card-header">参考商品</div>  
+                        <div class="card-body text-center"> 
+                            <img src="{{ $items[$i]['img_src'] }}" class="img-fluid d-block">                     
+                            <a href="{{ $items[$i]['itemUrl'] }}" class="item_title">{{ $items[$i]['title'] }}</a>
+                        </div>
+                        <div class="card-footer">
+                            <div>価格：{{ number_format($items[$i]['price']) }}円<div>   
+                            @if($items[$i]['review'] > 0)
+                            <div>レビュー評価:{{ $items[$i]['review'] }}点</div> 
+                            @else
+                            <div>レビューはありません</div>
+                            @endif
+                        </div>        
+                    </div>
+                @endfor
+        </div>
+        @endif
     </div>
 </div>
 
