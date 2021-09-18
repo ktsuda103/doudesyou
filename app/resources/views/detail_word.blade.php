@@ -30,13 +30,13 @@
                                         @csrf
                                         <input type="hidden" name="id" value="{{ $stock->id }}">
                                         <input type="hidden" name="word_id" value="{{ $word->id }}">
-                                        <button class="btn" type="submit"><i class="far fa-star fa-2x"></i></button>
+                                        <button class="btn btn-secondary" type="submit">ストックを解除する</button>
                                     </form>
                                 @else
                                     <form class="d-inline" action="{{ route('store_stock') }}" method="post">
                                         @csrf
                                         <input type="hidden" name="id" value="{{ $word->id }}">
-                                        <button class="btn" type="submit"><i class="fas fa-star star fa-2x"></i></button>
+                                        <button class="btn btn-primary" type="submit">ストックする</button>
                                     </form>
                                 @endif
                             @endauth

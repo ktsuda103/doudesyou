@@ -26,10 +26,6 @@ li{
     margin-bottom: 20px;
 }
 
-.star{
-    color: #ffd700;
-}
-
 .item_title{
     overflow: hidden;
     text-overflow: ellipsis;
