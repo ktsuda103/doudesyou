@@ -86,8 +86,13 @@
         </div>
         <div class="col-md-3">   
             <div class="card">
-                <div class="card-header">ランキング</div>
-                <div class="card-body">一位</div>
+                <div class="card-header">人気ランキング</div>
+                <div class="card-body">
+                @foreach($count_stocks as $key=>$count_stock)
+                    {{ $key+1 }}位<a href="{{ route('detail_word',['id'=>$count_stock->id]) }}" class="d-block">{{ $count_stock->word }}</a>
+                    <hr>
+                @endforeach
+                </div>
             </div>
             @if(!empty($items))
                 @for($i=0; $i<1; $i++)

@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+
 
 class Stock extends Model
 {
@@ -25,5 +27,19 @@ class Stock extends Model
     {
         $user_id = \Auth::id();
         return $this->where('user_id',$user_id);
+    }
+
+    public function count_stock()
+    {
+        $count_stock = DB::table('stocks')
+        ->join('words','stocks.word_id','=','words.id')
+        ->select('words.word','words.id',DB::raw("count(*) as cnt"))
+        ->groupBy('words.word')
+        ->groupBy('words.id')
+        ->orderBy('cnt','DESC')
+        ->limit(3)
+        ->get();
+
+        return $count_stock;
     }
 }

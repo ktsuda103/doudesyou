@@ -51,11 +51,12 @@ class HomeController extends Controller
         $stock_model = new Stock();
         $posts = $this->get_post($id);
         $word = Word::where('status',0)->find($id);
+        $count_stocks = $stock_model->count_stock();
         $items = $this->get_rakuten_items($word['title']);
         //dd($items);
         $stock = $stock_model->get_my_word_stock($word)->first();
         if(!empty($word)){
-            return view('detail_word',compact('word','posts','stock','items'));
+            return view('detail_word',compact('word','posts','stock','items','count_stocks'));
         }else{
             return redirect()->route('home');
         }
@@ -97,4 +98,6 @@ class HomeController extends Controller
             return $items;
         }
     }
+
+    
 }
