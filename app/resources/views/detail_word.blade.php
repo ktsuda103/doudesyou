@@ -89,7 +89,7 @@
                 <div class="card-header">人気ランキング</div>
                 <div class="card-body">
                 @foreach($count_stocks as $key=>$count_stock)
-                    {{ $key+1 }}位<a href="{{ route('detail_word',['id'=>$count_stock->id]) }}" class="d-block">{{ $count_stock->word }}</a>
+                    {{ $key+1 }}位<a href="{{ route('detail_word',['id'=>$count_stock->id]) }}" class="d-block word">{{ $count_stock->word }}</a>
                     <hr>
                 @endforeach
                 </div>
