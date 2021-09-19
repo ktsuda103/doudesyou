@@ -84,8 +84,12 @@
                 </div>
             </div>
         </div>
-        @if(!empty($items))
-        <div class="col-md-3">
+        <div class="col-md-3">   
+            <div class="card">
+                <div class="card-header">ランキング</div>
+                <div class="card-body">一位</div>
+            </div>
+            @if(!empty($items))
                 @for($i=0; $i<1; $i++)
                     <div class="card p-0">
                         <div class="card-header">参考商品</div>  
@@ -96,17 +100,15 @@
                         <div class="card-footer">
                             <div>価格：{{ number_format($items[$i]['price']) }}円<div>   
                             @if($items[$i]['review'] > 0)
-                            <div>レビュー評価:{{ $items[$i]['review'] }}点</div> 
+                                <div>レビュー評価:{{ $items[$i]['review'] }}点</div> 
                             @else
-                            <div>レビューはありません</div>
+                                <div>レビューはありません</div>
                             @endif
                         </div>        
                     </div>
                 @endfor
+            @endif
         </div>
-        @endif
     </div>
 </div>
-
-
 @endsection
