@@ -47,8 +47,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="card-body form-group">
-                    {!! $word->content !!}
+                <div class="card-body form-group content">
+                    {{ $word->content }}
                 </div>
             </div>
             

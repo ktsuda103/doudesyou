@@ -30,3 +30,12 @@ li{
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.red{
+    color: red;
+    font-size: 25px;
+}
+
+.big{
+    font-size: 20px;
+}
