@@ -88,7 +88,7 @@
                                 その他
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <a href="{{ route('index_contact') }}" class="dropdown-item">
+                                <a href="{{ route('contact.index_contact') }}" class="dropdown-item">
                                     お問い合わせ
                                 </a>
                                 <a href="" class="dropdown-item">

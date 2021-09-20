@@ -8,7 +8,7 @@
                 <div class="card-header">お問い合わせ</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('confirm_contact') }}">
+                    <form method="POST" action="{{ route('contact.confirm_contact') }}">
                         @csrf
                         <div class="form-group row">
                             <label for="email" class="col-md-3 col-form-label text-md-right">メールアドレス</label>
@@ -56,7 +56,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-9 offset-md-3">
                                 <button type="submit" class="btn btn-primary">
-                                    送信
+                                    お問い合わせ内容の確認へ
                                 </button>
                             </div>
                         </div>

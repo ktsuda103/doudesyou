@@ -39,6 +39,6 @@ Route::post('/store_stock', [StockController::class, 'store_stock'])->name('stor
 Route::post('/delete_stock', [StockController::class, 'delete_stock'])->name('delete_stock');
 Route::get('/index_stock', [StockController::class, 'index_stock'])->name('index_stock');
 
-Route::get('/index_contact', [ContactController::class, 'index_contact'])->name('index_contact');
-Route::post('/confirm_contact', [ContactController::class, 'confirm_contact'])->name('confirm_contact');
-Route::post('/thanks_contact', [ContactController::class, 'thanks_contact'])->name('thanks_contact');
+Route::get('/index_contact', [ContactController::class, 'index_contact'])->name('contact.index_contact');
+Route::post('/confirm_contact', [ContactController::class, 'confirm_contact'])->name('contact.confirm_contact');
+Route::post('/thanks_contact', [ContactController::class, 'thanks_contact'])->name('contact.thanks_contact');

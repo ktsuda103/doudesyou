@@ -10,13 +10,13 @@ class ContactController extends Controller
 {
     public function index_contact()
     {
-        return view('index_contact');
+        return view('contact.index_contact');
     }
 
     public function confirm_contact(ContactFormRequest $request)
     {
         $contact = $request->all();
-        return view('confirm_contact',compact('contact'));
+        return view('contact.confirm_contact',compact('contact'));
     }
 
     public function thanks_contact(ContactFormRequest $request)
@@ -25,6 +25,6 @@ class ContactController extends Controller
         //$contact_sendmail = new ContactSendmail($contact);
         \Mail::to($contact['email'])->send(new ContactSendmail($contact));
         $request->session()->regenerateToken();
-        return view('thanks_contact');
+        return view('contact.thanks_contact');
     }
 }
