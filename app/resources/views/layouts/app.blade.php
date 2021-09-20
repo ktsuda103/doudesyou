@@ -88,10 +88,10 @@
                                 その他
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <a href="{{ route('contact.index_contact') }}" class="dropdown-item">
+                                <a href="{{ route('index_contact') }}" class="dropdown-item">
                                     お問い合わせ
                                 </a>
-                                <a href="" class="dropdown-item">
+                                <a href="{{ route('user_policy') }}" class="dropdown-item">
                                     利用規約
                                 </a>
                                 <a href="" class="dropdown-item">

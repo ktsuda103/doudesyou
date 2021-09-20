@@ -8,7 +8,7 @@
                 <div class="card-header">お問い合わせ</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('contact.confirm_contact') }}">
+                    <form method="POST" action="{{ route('confirm_contact') }}">
                         @csrf
                         <div class="form-group row">
                             <label for="email" class="col-md-3 col-form-label text-md-right">メールアドレス</label>
