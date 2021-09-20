@@ -83,6 +83,22 @@
                                 </div>
                             </li>
                         @endguest
+                        <li class="nav-item dropdown">
+                            <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                その他
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="{{ route('index_contact') }}" class="dropdown-item">
+                                    お問い合わせ
+                                </a>
+                                <a href="" class="dropdown-item">
+                                    利用規約
+                                </a>
+                                <a href="" class="dropdown-item">
+                                    プライバシーポリシー
+                                </a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
