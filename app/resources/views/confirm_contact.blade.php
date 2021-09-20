@@ -8,7 +8,7 @@
                 <div class="card-header">お問い合わせ内容確認</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('confirm_contact') }}">
+                    <form method="POST" action="{{ route('thanks_contact') }}">
                         @csrf
                         <input type="hidden" name="email" value="{{ $contact['email'] }}">
                         <input type="hidden" name="category" value="{{ $contact['category'] }}">
