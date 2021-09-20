@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\MypageController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +38,7 @@ Route::post('/store_post', [PostController::class, 'store_post'])->name('store_p
 Route::post('/store_stock', [StockController::class, 'store_stock'])->name('store_stock');
 Route::post('/delete_stock', [StockController::class, 'delete_stock'])->name('delete_stock');
 Route::get('/index_stock', [StockController::class, 'index_stock'])->name('index_stock');
+
+Route::get('/index_contact', [ContactController::class, 'index_contact'])->name('index_contact');
+Route::post('/confirm_contact', [ContactController::class, 'confirm_contact'])->name('confirm_contact');
+Route::post('/thanks_contact', [ContactController::class, 'thanks_contact'])->name('thanks_contact');
