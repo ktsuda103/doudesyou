@@ -8,7 +8,7 @@
                 <div class="card-header">お問い合わせ内容確認</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('contact.thanks_contact') }}">
+                    <form method="POST" action="{{ route('thanks_contact') }}">
                         @csrf
                         <input type="hidden" name="email" value="{{ $contact['email'] }}">
                         <input type="hidden" name="category" value="{{ $contact['category'] }}">
@@ -36,7 +36,7 @@
 
                         <div class="form-group row">
                             <div class="offset-md-1 col-md-3">
-                                <a href="{{ route('contact.index_contact') }}" class="btn btn-info"><戻る</a> 
+                                <a href="{{ route('index_contact') }}" class="btn btn-info"><戻る</a> 
                             </div>
                            
                             <div class="col-md-2 offset-md-6">

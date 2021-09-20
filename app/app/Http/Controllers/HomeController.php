@@ -99,5 +99,8 @@ class HomeController extends Controller
         }
     }
 
-    
+    public function user_policy()
+    {
+        return view('policy.user_policy');
+    }
 }
