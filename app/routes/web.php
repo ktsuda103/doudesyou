@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\MypageController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
