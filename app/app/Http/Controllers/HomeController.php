@@ -103,4 +103,9 @@ class HomeController extends Controller
     {
         return view('policy.user_policy');
     }
+
+    public function privacy_policy()
+    {
+        return view('policy.privacy_policy');
+    }
 }
