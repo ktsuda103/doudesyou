@@ -94,7 +94,7 @@
                                 <a href="{{ route('user_policy') }}" class="dropdown-item">
                                     利用規約
                                 </a>
-                                <a href="" class="dropdown-item">
+                                <a href="{{ route('privacy_policy') }}" class="dropdown-item">
                                     プライバシーポリシー
                                 </a>
                             </div>
