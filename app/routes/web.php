@@ -27,6 +27,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/detail_word/{id}', [HomeController::class, 'detail_word'])->name('detail_word');
 Route::post('/search', [HomeController::class, 'search'])->name('search');
 Route::get('/user_policy', [HomeController::class, 'user_policy'])->name('user_policy');
+Route::get('/privacy_policy', [HomeController::class, 'privacy_policy'])->name('privacy_policy');
 
 
 Route::get('/admin', [AdminController::class, 'admin'])->name('admin');
