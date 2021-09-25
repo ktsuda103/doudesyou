@@ -68,6 +68,7 @@
                     </ul>
                     @endforeach
                 </div>
+                {{ $words->links() }}
             </div>
         </div>
     </div>

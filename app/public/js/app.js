@@ -1,16 +1,15 @@
 
-$(function(){
-  var str = $('.content').text().replace(/\[/g, '<p class="red">')
-  .replace(/\]/g, '</p>')
-  .replace(/\|/g,'<br>')
-  .replace(/\(/g,'<p class="big">')
-  .replace(/\)/g,'<p style="font-size:10px; color:#c0c0c0;">');
-  $('.content').html(str);
-})
-
-
 
 /******/ (() => { // webpackBootstrap
+  $(function(){
+    var str = $('.content').text().replace(/\[/g, '<p class="red">')
+    .replace(/\]/g, '</p>')
+    .replace(/\|/g,'<br>')
+    .replace(/\(/g,'<p class="big">')
+    .replace(/\)/g,'<p style="font-size:10px; color:#c0c0c0;">');
+    $('.content').html(str);
+  });
+
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/axios/index.js":
