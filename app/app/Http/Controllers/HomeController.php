@@ -28,7 +28,7 @@ class HomeController extends Controller
     public function index()
     {
         $word_model = new Word();
-        $words = $word_model->get_word();
+        $words = $word_model->get_word()->paginate(10);
         return view('home',compact('words'));
     }
 
@@ -40,7 +40,7 @@ class HomeController extends Controller
             return redirect()->route('home')->with('errors','キーワードを選択してください。');
         }
         $word_model = new Word();
-        $words = $word_model->search($title,$person);
+        $words = $word_model->search($title,$person)->paginate(10);
         return view('home',compact('words'));
     }
 

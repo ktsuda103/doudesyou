@@ -1,5 +1,3 @@
-
-
 /******/ (() => { // webpackBootstrap
   $(function(){
     var str = $('.content').text().replace(/\[/g, '<p class="red">')
