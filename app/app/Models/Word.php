@@ -16,12 +16,12 @@ class Word extends Model
 
     public function search($title,$person)
     {
-        if(!empty($title) && empty($person)){
-            return $this->get_word()->where('title',$title)->get();
+        if(!empty($title) && empty($person)){   
+            return $this->get_word()->where('title',$title);
         }elseif(empty($title) && !empty($person)){
-            return $this->get_word()->where('person',$person)->get();
+            return $this->get_word()->where('person',$person);
         }else{
-            return $this->get_word()->where('person',$person)->where('title',$title)->get();
+            return $this->get_word()->where('person',$person)->where('title',$title);
         }
     }
 }
