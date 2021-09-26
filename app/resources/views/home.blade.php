@@ -13,7 +13,7 @@
             <form action="{{ route('search') }}" method="post" class="form-group form-inline">
                 @csrf
                 <select name="title" id="" class="form-control">
-                    <option value="">選択してください</option>
+                    <option value="">サブタイトルを選択してください</option>
                     <option value="夏野菜スペシャル">夏野菜スペシャル</option>
                     <option value="ヨーロッパ・リベンジ">ヨーロッパ・リベンジ</option>
                     <option value="マレーシアジャングル探検">マレーシアジャングル探検</option>
@@ -29,7 +29,7 @@
                     <option value="ヨーロッパ２１カ国完全制覇">ヨーロッパ２１カ国完全制覇</option>
                 </select>
                 <select name="person" id="" class="form-control">
-                    <option value="">選択してください</option>
+                    <option value="">名前を選択してください</option>
                     <option value="大泉洋">大泉洋</option>
                     <option value="鈴井貴之">鈴井貴之</option>
                     <option value="藤村忠寿">藤村忠寿</option>
