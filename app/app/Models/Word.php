@@ -11,7 +11,7 @@ class Word extends Model
 
     public function get_word()
     {
-        return Word::where('status',0);
+        return Word::where('status',0)->inRandomOrder();
     }
 
     public function search($title,$person)
