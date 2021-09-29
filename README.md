@@ -6,6 +6,7 @@ __-集え-__ <br>
 大人気！北海道の人気ローカル番組の名言を集めて一覧にしました！
 
 ## アプリURL
+http://118.27.30.216:8000/
 
 ## 概要
 北海道の人気ローカル番組の名言を集めてお気に入りをストックすることができます。 <br>
@@ -65,4 +66,6 @@ __-集え-__ <br>
 ・Docker compose<br>
 
 # ER図
+![doudesyouselectiion](https://user-images.githubusercontent.com/86056191/135220158-84d907de-ce7e-4046-80c0-44c2b840903b.jpg)
+
 
