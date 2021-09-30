@@ -60,8 +60,8 @@ http://118.27.30.216:8000/
 ・jQuery 3.6.0<br>
 ・jScroll
 
-**データベース**
-mySQL5.7
+**データベース**<br>
+・mySQL5.7<br>
 
 **インフラ**<br>
 ・Conoha VPS<br>
