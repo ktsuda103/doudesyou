@@ -10,6 +10,7 @@ http://118.27.30.216:8000/
 
 ## 概要
 北海道の人気ローカル番組の名言を集めてお気に入りをストックすることができます。 <br>
+気に入った名言をツイッターでシェアすることができます。<br>
 ストック数に応じてランキングが表示されます。<br>
 管理者は名言を追加・編集・削除することができます。
 
@@ -32,9 +33,11 @@ http://118.27.30.216:8000/
 ・名言の詳細が表示されます。<br>
 ・ストック数に応じたランキングが表示されます。<br>
 ・楽天APIから取得した参考商品が表示されます。<br>
+・ツイッターに気に入った名言をシェアすることができます。<br>
 ・気に入った名言をストックすることができます。（ログイン後のみ）<br>
 ・コメントを残すことができます。（ログイン後のみ）<br>
-<img width="1173" alt="スクリーンショット 2021-09-29 14 25 55" src="https://user-images.githubusercontent.com/86056191/135208342-643439ac-db5a-46b3-a9c9-ce6adf2f3bbb.png">
+<img width="1155" alt="スクリーンショット 2021-10-01 22 57 53" src="https://user-images.githubusercontent.com/86056191/135632507-6b06b2b0-c0e7-4038-955e-95059e4ecdb7.png">
+
 
 <img width="1134" alt="スクリーンショット 2021-09-29 14 28 21" src="https://user-images.githubusercontent.com/86056191/135208550-3f153435-d514-4f46-949c-5475a50bf6a5.png">
 
@@ -67,6 +70,10 @@ http://118.27.30.216:8000/
 ・Conoha VPS<br>
 ・Docker<br>
 ・Docker compose<br>
+
+**バージョン管理**<br>
+・Git 2.15.0<br>
+・GitHub<br>
 
 # ER図
 ![doudesyouselectiion](https://user-images.githubusercontent.com/86056191/135220158-84d907de-ce7e-4046-80c0-44c2b840903b.jpg)
