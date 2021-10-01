@@ -54,7 +54,7 @@ class HomeController extends Controller
         $count_stocks = $stock_model->count_stock();
         $items = $this->get_rakuten_items($word['title']);
         //dd($items);
-        $stock = $stock_model->get_my_word_stock($word)->first();
+        $stock = $stock_model->get_my_word_stock($word['id'])->first();
         if(!empty($word)){
             return view('detail_word',compact('word','posts','stock','items','count_stocks'));
         }else{

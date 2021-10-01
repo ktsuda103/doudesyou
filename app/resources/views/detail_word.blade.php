@@ -25,6 +25,7 @@
                             <div class="d-flex justify-content-between">
                             <div class="lead word">｢{{ $word['word'] }}｣</div>
                             @auth
+                            
                                 @if(!empty($stock))
                                     <form class="d-inline" action="{{ route('delete_stock') }}" method="post">
                                         @csrf
@@ -43,6 +44,7 @@
                             </div>
                             <div>by{{ $word['person'] }}</div>
                             <div class="text-right">〜{{ $word['title'] }}</div>
+                            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="私の好きな名言は・・・「{{ $word['word'] }}」でした！" data-hashtags="doudesyouselection" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                             
                         </li>
                     </ul>
