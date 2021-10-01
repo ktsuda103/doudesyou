@@ -69,6 +69,10 @@ http://118.27.30.216:8000/
 **データベース**<br>
 ・mySQL5.7<br>
 
+**API**<br>
+・楽天API<br>
+・Twitter API<br>
+
 **インフラ**<br>
 ・Conoha VPS<br>
 ・Docker<br>
