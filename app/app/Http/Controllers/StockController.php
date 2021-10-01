@@ -24,8 +24,12 @@ class StockController extends Controller
         $user_id = \Auth::id();
         $word_id = $request->input('id');
         $stock_model = new Stock();
+        $my_stock = $stock_model->get_my_word_stock($word_id)->first();
+        if(empty($my_stock)){
         $stock_model->store($user_id,$word_id);
-
+        }else{
+            return redirect()->route('detail_word',['id'=>$word_id])->with('success', 'すでにストックされています。');
+        }
         return redirect()->route('detail_word',['id'=>$word_id])->with('success', 'ストックしました。');
     }
 

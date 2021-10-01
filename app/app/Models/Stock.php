@@ -18,9 +18,9 @@ class Stock extends Model
         $this->save();
     }
 
-    public function get_my_word_stock($word)
+    public function get_my_word_stock($word_id)
     {
-        return $this->get_my_all_stock()->where('word_id',$word['id']);
+        return $this->get_my_all_stock()->where('word_id',$word_id);
     }
 
     public function get_my_all_stock()
