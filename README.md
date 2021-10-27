@@ -11,6 +11,38 @@ __-集え-__ <br>
 ## アプリURL
 www.dousel.net:8000/
 
+## 使用技術
+**バックエンド**<br>
+・PHP 7.3<br>
+・Laravel 8<br>
+
+**フロントエンド**<br>
+・HTML<br>
+・CSS<br>
+・Bootstrap 4<br>
+・jQuery 3.6.0<br>
+・jScroll
+
+**データベース**<br>
+・mySQL5.7<br>
+
+**API**<br>
+・楽天API<br>
+・Twitter API<br>
+
+**インフラ**<br>
+・Conoha VPS(本番環境)<br>
+・Docker(開発環境)<br>
+・Docker compose<br>
+
+**バージョン管理**<br>
+・Git 2.15.0<br>
+・GitHub<br>
+
+# ER図
+![doudesyouselectiion](https://user-images.githubusercontent.com/86056191/135220158-84d907de-ce7e-4046-80c0-44c2b840903b.jpg)
+
+
 ## 概要
 北海道の人気ローカル番組の名言を集めてお気に入りをストックすることができます。 <br>
 気に入った名言をツイッターでシェアすることができます。<br>
@@ -54,35 +86,5 @@ www.dousel.net:8000/
 
 
 
-## 使用技術
-**バックエンド**<br>
-・PHP 7.3<br>
-・Laravel 8<br>
-
-**フロントエンド**<br>
-・HTML<br>
-・CSS<br>
-・Bootstrap 4<br>
-・jQuery 3.6.0<br>
-・jScroll
-
-**データベース**<br>
-・mySQL5.7<br>
-
-**API**<br>
-・楽天API<br>
-・Twitter API<br>
-
-**インフラ**<br>
-・Conoha VPS<br>
-・Docker<br>
-・Docker compose<br>
-
-**バージョン管理**<br>
-・Git 2.15.0<br>
-・GitHub<br>
-
-# ER図
-![doudesyouselectiion](https://user-images.githubusercontent.com/86056191/135220158-84d907de-ce7e-4046-80c0-44c2b840903b.jpg)
 
 
